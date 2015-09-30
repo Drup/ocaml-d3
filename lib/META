@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 5f2d5ce69d2a1c47aee88aba417e63b2)
+# DO NOT EDIT (digest: 529ff078833e39b60644e0076490c227)
 version = "0.1.0"
 description = "OCaml bindings for D3.js"
 requires = "js_of_ocaml js_of_ocaml.syntax"
@@ -8,5 +8,15 @@ archive(byte, plugin) = "d3.cma"
 archive(native) = "d3.cmxa"
 archive(native, plugin) = "d3.cmxs"
 exists_if = "d3.cma"
+package "tyxml" (
+ version = "0.1.0"
+ description = "OCaml bindings for D3.js"
+ requires = "js_of_ocaml tyxml"
+ archive(byte) = "d3_tyxml.cma"
+ archive(byte, plugin) = "d3_tyxml.cma"
+ archive(native) = "d3_tyxml.cmxa"
+ archive(native, plugin) = "d3_tyxml.cmxs"
+ exists_if = "d3_tyxml.cma"
+)
 # OASIS_STOP
 

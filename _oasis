@@ -24,13 +24,20 @@ Library d3
   Modules:      D3
   BuildDepends: js_of_ocaml, js_of_ocaml.syntax
 
+Library d3_tyxml
+  Path:         lib
+  Findlibname:  tyxml
+  Findlibparent:d3
+  Modules:      D3_tyxml
+  BuildDepends: js_of_ocaml, tyxml
+
 Document d3
   Title:                D3 Docs
   Type:                 ocamlbuild (0.4)
   BuildTools+:          ocamldoc
   Install:              true
   XOCamlbuildPath:      lib
-  XOCamlbuildLibraries: d3
+  XOCamlbuildLibraries: d3, d3.tyxml
 
 Executable rectangle
   Path:             examples
@@ -46,7 +53,7 @@ Executable todo
   Build$:           flag(examples)
   CompiledObject:   byte
   Install:          false
-  BuildDepends:     d3, lwt, js_of_ocaml, yojson
+  BuildDepends:     d3.tyxml, lwt, js_of_ocaml, yojson
 
 Executable tyxml
   Path:             examples
