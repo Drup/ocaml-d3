@@ -32,6 +32,7 @@ let view =
   svg |. (
     data "rect" (fun i _ -> make_dims i)
     |- S.enter rect
+    |- nest update [str attr "fill" "blue"]
     |- nest exit [remove]
   )
 ;;
